@@ -2,7 +2,6 @@ module "dashboard" {
 
   source = "../../"
 
-  name                = "dashboard"
   resource_group_name = "dashboard-rg"
   location            = "westeurope"
 
