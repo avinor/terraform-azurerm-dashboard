@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 2.83.0"
+      version = "~> 3.28.0"
     }
   }
 }
@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "dash" {
   tags = var.tags
 }
 
-resource "azurerm_dashboard" "dash" {
+resource "azurerm_portal_dashboard" "dash" {
   for_each = { for d in var.dashboards : d.name => d }
 
   name                = each.key
